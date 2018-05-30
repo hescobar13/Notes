@@ -34,9 +34,12 @@ see https://docs.microsoft.com/en-us/dotnet/api/microsoft.data.sqlite.sqliteconn
 
             //Read from Table
             /*
-            SQLiteCommand mycommand = new SQLiteCommand();
-            mycommand.CommandText = "Select Entry From List";
-            mycommand.Connection = myconnection;
-            SQLiteDataReader myreader = mycommand.ExecuteReader();
-            Console.WriteLine(myreader.Read());
+             SQLiteCommand mytestcommand = new SQLiteCommand();
+            mytestcommand.CommandText = "Select Entry From List";
+            mytestcommand.Connection = myconnection;
+            SQLiteDataReader myreader = mytestcommand.ExecuteReader();
+            while (myreader.Read())
+            {
+                Console.WriteLine(myreader.GetString(0));
+            }
             */
