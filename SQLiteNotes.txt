@@ -8,31 +8,39 @@ see https://docs.microsoft.com/en-us/dotnet/api/microsoft.data.sqlite.sqliteconn
 
 
 
-//Create connection object to be used with SQLiteCommand
-            /* 
+	    //Create connection object to be used with SQLiteCommand
             SQLiteConnection myconnection = new SQLiteConnection("Data Source=Organizerdb.sqlite");            
             myconnection.Open();
-            */
-            /* Creates a new table
+            
+            // Creates a new table
             string createtable = "Create Table List (Entry string)";
             SQLiteCommand mycommand = new SQLiteCommand(createtable, myconnection);
             mycommand.ExecuteNonQuery();
-            */
+            
 
-            /*Inserts into a table
+            //Inserts into a table
             SQLiteCommand mycommand = new SQLiteCommand();
-            string insertdata = "Insert Into List (Entry) Values ('Hello')";
+            string insertdata = "Insert Into List (Entry) Values ('$movie')";
             mycommand.CommandText = insertdata;
-            //the next line i have to manually set connection for the class because there is no constructor tht only takes connection
-            //you can also do SQLiteCommand mycommand = myconnection.CreateCommand()... this automatically sets the connection for the 
-            //new command object that is created, instead of having to do it manually as I do it below
+/*the next line i have to manually set connection for the class because there is no constructor tht only takes connection
+you can also do SQLiteCommand mycommand = myconnection.CreateCommand()... this automatically sets the connection for the 
+new command object that is created, instead of having to do it manually as I do it below
+*/
             mycommand.Connection = myconnection;
-            Console.WriteLine(mycommand.CommandText);
+/* This adds and sets the paramaters that will be used with the SQL query. So it sets "$movie" to the movie variable. 
+You must make sure the movie variable is declared BEFORE using it here though
+*/
+           mycommand.Parameters.AddWithValue("$movie", movie);
             mycommand.ExecuteNonQuery();
-            Console.ReadLine();
-            */
+            
 
-            //Read from Table
+            
+
+
+
+
+
+//Read from Table
             /*
              SQLiteCommand mytestcommand = new SQLiteCommand();
             mytestcommand.CommandText = "Select Entry From List";
