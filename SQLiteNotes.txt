@@ -20,23 +20,37 @@ see https://docs.microsoft.com/en-us/dotnet/api/microsoft.data.sqlite.sqliteconn
 
             //Inserts into a table
             SQLiteCommand mycommand = new SQLiteCommand();
-            string insertdata = "Insert Into List (Entry) Values ('$movie')";
+            string insertdata = "Insert Into List (Entry) Values ('@movie')";
             mycommand.CommandText = insertdata;
 /*the next line i have to manually set connection for the class because there is no constructor tht only takes connection
 you can also do SQLiteCommand mycommand = myconnection.CreateCommand()... this automatically sets the connection for the 
 new command object that is created, instead of having to do it manually as I do it below
 */
             mycommand.Connection = myconnection;
-/* This adds and sets the paramaters that will be used with the SQL query. So it sets "$movie" to the movie variable. 
+/* This adds and sets the paramaters that will be used with the SQL query. So it sets "@movie" to the movie variable. 
 You must make sure the movie variable is declared BEFORE using it here though
 */
-           mycommand.Parameters.AddWithValue("$movie", movie);
+           mycommand.Parameters.AddWithValue("movie", movie);
             mycommand.ExecuteNonQuery();
             
-
+/* Another example of parameter use
+	    SQLiteConnection myconnection = new SQLiteConnection("Data Source=Organizerdb.sqlite");
+            myconnection.Open();
             
+            string movie = "thor";
+            SQLiteCommand mycommand = new SQLiteCommand();
+            mycommand.CommandText = "Select Entry From List Where Entry LIKE @movie";
+            mycommand.Connection = myconnection;
+            mycommand.Parameters.AddWithValue("movie", movie);
+            
+            SQLiteDataReader myreader = mycommand.ExecuteReader();
 
-
+            while (myreader.Read())
+            {
+                Console.WriteLine(myreader.GetValue(0));
+            }
+            Console.ReadLine();
+ */           
 
 
 
