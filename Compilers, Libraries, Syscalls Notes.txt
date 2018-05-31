@@ -1,0 +1,38 @@
+//Notes on System calls and the interaction between standard libraries, system calls, and compilers
+
+1. Standard libraries are defined by organizations and include things that every implementation (aka standard library and compiler) should be able to understand
+Example: ANSI C
+	-There are a few implementations of C. Most used on in Linux is Glibc. Windows has own implementation.
+	-The different implementations all support AT LEAST ANSI C. Glibc also has POSIX stuff added to it
+	-Each standard library also has functions and stuff that are not part of the standard
+
+2. What is a library- Basically a collection of definitions of functions and types etc.
+Example: mytestlib contains a class called MyTestClass
+	class MyTestClass
+	   {
+		public MyTestFunction
+		   {
+			Console.WriteLine("Hello World");
+		   }
+	    }
+
+-In your Main program you would have to include the mytestlib page and you can then call the method
+	class TestProgram
+	   {
+		public main
+		   {
+			MyTestClass.MyTestFunction
+		   }
+	   }
+-This will print out Hello world to the console.
+-In the background the compiler basically makes substitutions-NEED TO RESEARCH THIS MORE
+
+3. System Calls are- NEED MORE RESEARCH
+	-Standard libraries usually act as wrappers for the syscalls.
+	   Example: Calling fopen() in C will call the open system call in Linux
+	-Are they libraries? Where are the system calls kept?
+	
+4. Compilers are used to translate betweeen languages
+	-They are not dependent on any libraries. For example GCC doest not necessarily ONLY support glibc
+	-They do have things that are unique to them. AKA that only they support that are not part of Standard
+	   Example: See https://msdn.microsoft.com/en-us/library/34h23df8.aspx and https://gcc.gnu.org/onlinedocs/gcc-5.3.0/gcc/C-Extensions.html
