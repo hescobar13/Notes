@@ -1,0 +1,21 @@
+C#
+
+Reference Type vs Value Type
+	-Value type actually holds its own data
+		Example: string mystring = 'Hello World!'
+	-mystring is created and holds the data
+
+	-Reference Type- holds a pointer(Reference) to the actual data
+		Example: Rigidbody myrigidbody = Getcompononent<Rigidbody>();
+	-This creates a space in memory(variable basically) that holds the location(reference) to the actualy Rigidbody
+	-Another example
+		Example: Myclass myclass = new Myclass();
+	-Creates a new object using the class defintion of Myclass and also creates a reference to that new object in myclass
+	-Classes are just simply a reference type
+	-Types, it seems, are basically just like blueprints.
+	-You can assign things to use a blueprint and the value
+		Example: int32 myint = 20;
+	-This basically creates an object called myint that uses the int32 bleuprint and has a value of 20
+	-The blueprint can contain many things. see, https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/ for more info on that
+
+	-Objects are just instances of types
