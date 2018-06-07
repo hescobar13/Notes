@@ -27,7 +27,7 @@ Example: mytestlib contains a class called MyTestClass
 -This will print out Hello world to the console.
 -In the background the compiler basically makes substitutions-NEED TO RESEARCH THIS MORE
 
-3. System Calls are- NEED MORE RESEARCH
+3. System Calls are- functions provided by the OS to do things on behalf of the user space program. For example I/O
 	-Standard libraries usually act as wrappers for the syscalls.
 	   Example: Calling fopen() in C will call the open system call in Linux
 	-Are they libraries? Where are the system calls kept?
