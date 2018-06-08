@@ -19,3 +19,13 @@ Reference Type vs Value Type
 	-The blueprint can contain many things. see, https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/ for more info on that
 
 	-Objects are just instances of types
+	
+
+Static Methods/properties/etc
+	-A static method, etc means you have to call the method/property/etc from the object itself instead of a reference of it
+		-Example: see this instead: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/static
+		-Basically just know that if it is a static method you would call it like this: ClassName.MethodName
+		Instead of: ClassName mynewclass = new ClassName()
+			    mynewclass.MethodName;
+		-Again, the above does not work! The correct way would be 
+			ClassName.MethodName;
