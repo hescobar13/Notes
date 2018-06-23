@@ -18,7 +18,7 @@ Reference Type vs Value Type
 	-This basically creates an object called myint that uses the int32 bleuprint and has a value of 20
 	-The blueprint can contain many things. see, https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/ for more info on that
 
-	-Objects are just instances of types
+	-Objects are just instances of classes aka types....because classes are types. a specific type of type. It is a reference type.
 	
 
 Static Methods/properties/etc
