@@ -1,0 +1,21 @@
+web server must have an interface to the script in the background
+initially was done via cgi
+
+other infrastructure has been created and there are various method for various programming methods to use
+some methods are specific to the language
+each method is different and is more or less efficient than others
+
+Python- can use cgi, fastcgi, etc.... commonly used with WSGI
+https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface
+https://www.sitepoint.com/python-web-applications-the-basics-of-wsgi/
+
+Java- seems the ultimate way to interface for Java is servlets
+a lot of infrastructure though
+https://en.wikipedia.org/wiki/Java_servlet
+https://stackoverflow.com/questions/2095397/what-is-the-difference-between-jsf-servlet-and-jsp
+https://en.wikipedia.org/wiki/JavaServer_Pages
+
+PHP- modules that are added to web servers, cgi, fastcgi, mod_php
+
+C#- 
+
