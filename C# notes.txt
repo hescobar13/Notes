@@ -1,26 +1,25 @@
 C#
+It all begins with System.Object which everything (almost everything, see https://stackoverflow.com/questions/436211/is-everything-in-net-an-object) IMPLICITLY inherits from
+
+There are two types: value types and reference types
 
 Reference Type vs Value Type
 	-Value type actually holds its own data
 		Example: string mystring = 'Hello World!'
 	-mystring is created and holds the data
 
-	-Reference Type- holds a pointer(Reference) to the actual data
-		Example: Rigidbody myrigidbody = Getcompononent<Rigidbody>();
-	-This creates a space in memory(variable basically) that holds the location(reference) to the actualy Rigidbody
-	-Another example
-		Example: Myclass myclass = new Myclass();
-	-Creates a new object using the class defintion of Myclass and also creates a reference to that new object in myclass
-	-Classes are just simply a reference type
-	-Types, it seems, are basically just like blueprints.
-	-You can assign things to use a blueprint and the value
-		Example: int32 myint = 20;
-	-This basically creates an object called myint that uses the int32 bleuprint and has a value of 20
-	-The blueprint can contain many things. see, https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/ for more info on that
-
-	-Objects are just instances of classes aka types....because classes are types. a specific type of type. It is a reference type.
+	-Reference Type- store references to the actual data. Reference types are also referred to as objects.
 	
+	Classes- one of the basic constructs of the common type system in the .NET Framework. Each is essentially a data structure that encapsulates a set of data and behaviors that belong together as a logical unit. The data and behaviors are the members of the class or struct, and they include its methods, properties, and events, and so on, as listed later in this topic.
 
+A class or struct declaration is like a blueprint that is used to create instances or objects at run time. If you define a class or struct called Person, Person is the name of the type. If you declare and initialize a variable p of type Person, p is said to be an object or instance of Person. Multiple instances of the same Person type can be created, and each instance can have different values in its properties and fields.
+
+A class is a reference type. When an object of the class is created, the variable to which the object is assigned holds only a reference to that memory. When the object reference is assigned to a new variable, the new variable refers to the original object. Changes made through one variable are reflected in the other variable because they both refer to the same data. 
+
+		Example:
+			Myclass VariableName = new Myclass();
+		A new object is created and assigned to VariableName of type Myclass... VariableName is only a reference to the actual object
+	
 Static Methods/properties/etc
 	-A static method, etc means you have to call the method/property/etc from the object itself instead of a reference of it
 		-Example: see this instead: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/static
