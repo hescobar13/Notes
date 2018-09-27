@@ -1,0 +1,38 @@
+C# Notes
+
+TYPES- there are two main types, Reference and Value types...types in general are just blueprints, specially useful to think of refenrece types this way
+
+Value types- They hold their own data. only one place in memory is created and the data is stored there. examples: all the primitive types- integers, float, etc.
+
+Reference types- blueprints that can be instantiated and created into objects... examples, classes, structs, interfaces
+
+Object- A location in memory that holds the data that was created from the reference type blueprint
+you don't work with objects directly, you create a reference to them
+	example: MyClass myvariable = new MyClass();
+	On the right side you create a new object based on the MyClass blueprint, and on the left hand side you create a variable of a certain type to hold a reference to the object you created
+
+Interface- Only has the signatures of methods, properties, etc.... any class that inherits from it must implement all of the methods/properties itself... useful since classes can only inherit from one class, including abstract classes, but can inherit from multiple interfaces
+
+
+MODIFIERS- are used to modify classes, methods, properties. Access modifiers (public, private, etc.) come first, follow by other modifiers, followed by return types in methods...
+
+Abstract class- cannot be instantiated...has at least one abstract method, but can contain normal methods and properties... if all methods are uncompleted then it is the same as an interface
+Inheriting class must implement its methods.... mostly used as a base class since it can't be instantiated
+
+Abstract class vs Interface- https://www.codeproject.com/Articles/11155/Abstract-Class-versus-Interface
+
+Override- To implement the methods that are abstract or from an Interface you need to override them
+	Override basically means providing your own implementation of something
+	You can only override Virtual, Abstract, and Override methods- aka cannot override non-virtual or static methods
+
+Sealed- modifies classes... makes it so a class can't be inherited... can also use it on a method or property that overrides a virtual method or property
+
+Static- means the member(method/property/class) is a member of the type instead of any instance of the class
+	aka- you have to call it by its fully qualified name...example: Myclass.Mythod instead of MyInstance.Mythod...
+
+Virtual- Allows a method to be overriden via override... it doesn't have to be like abstract but it can be.
+	You cannot use virtual with static, abstract, private, or override
+
+
+
+
