@@ -25,7 +25,7 @@ Example: mytestlib contains a class called MyTestClass
 		   }
 	   }
 -This will print out Hello world to the console.
--In the background the compiler basically makes substitutions-NEED TO RESEARCH THIS MORE
+-In the background the compiler basically basically goes from to the thing that you reference. so when you call MyTestClass.MyTestFunction, the compiler goes to that and "asks" what it has to do to execute that method
 
 3. System Calls are- functions provided by the OS to do things on behalf of the user space program. For example I/O
 	-Standard libraries usually act as wrappers for the syscalls.
